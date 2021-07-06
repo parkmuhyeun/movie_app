@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "./Movie.css"
 
 function Movie({id, year, title, summary, poster, genres}){
-    return (
+    return (                                                                          //Home Content
         <Link
             to={{
                 pathname: `/movie/${id}`,
@@ -34,7 +34,7 @@ function Movie({id, year, title, summary, poster, genres}){
     );
 }
 
-Movie.propTypes = {
+Movie.propTypes = {                                                                 //prop Check
     id: PropTypes.number.isRequired,
     year: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,

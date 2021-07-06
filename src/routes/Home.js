@@ -9,13 +9,13 @@ class Home extends React.Component{
     movies: []
   };
 
-  getmovies= async () =>{
+  getmovies= async () =>{                                                            //movies get할때까지 기다리다가 setState
       const {
-        data: {
+        data: {                                                                      // .data.data.movies
           data:{movies}
         }
       } = await axios.get("https://yts-proxy.now.sh/list_movies.json?sort_by=rating");
-      this.setState({movies, isLoading: false});
+      this.setState({movies, isLoading: false});                                          
   };
 
   componentDidMount(){
@@ -26,7 +26,7 @@ class Home extends React.Component{
     const { isLoading, movies} = this.state;
     return (
       <section className="container">
-        {isLoading ? (
+        {isLoading ? (                                                                // loading ? .loader : .movies
           <div className="loader">
             <span className="loader___text">Loading...</span>
           </div>

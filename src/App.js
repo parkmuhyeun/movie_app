@@ -8,10 +8,10 @@ import "./App.css";
 
  
 function App(){
-  return (
+  return (                                                            //Home, About, Detail by Router
   <HashRouter>
     <Navigation />
-    <Route path="/" exact={true} component={Home} />
+    <Route path="/" exact={true} component={Home} />    
     <Route path="/about" component={About}/>
     <Route path="/movie/:id" component={Detail}/>
   </HashRouter>
